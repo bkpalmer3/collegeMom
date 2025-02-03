@@ -5,6 +5,9 @@ class Task (
 //    private val followUpDate: LocalDateTime,
 //    private val followUpReport: String,
 
+    //add iscomplete variable
+    //add should report variable
+
 ){
     fun displayInfo(){
         println("Task: $name")
