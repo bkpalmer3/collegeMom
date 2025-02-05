@@ -7,7 +7,9 @@ class User (
 //    private val profilePicture: String,
 ) {
     fun displayInfo(){
-        println("Username: $userName")
+        println("\nUsername: $userName")
+        println("User ID: $userId")
+        println("\nPlans")
         for (plan in planList){
             plan.displayInfo()
         }

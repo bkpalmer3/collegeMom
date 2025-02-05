@@ -1,10 +1,16 @@
 class Plan (
+    private val user: User,
     private val title: String,
     private val description: String,
-    private val goal: Goal, // list of goals rather than list
+    private val goalList: MutableList<Goal> = mutableListOf(),
 ) {
     fun displayInfo(){
-        println("Title: $title \nAbout: $description\n ")
-        println(goal.displayInfo())
+        println("Title: $title \nAbout: $description\n\nGoals:")
+        for (goal in goalList) {
+            goal.displayInfo()
+        }
+    }
+    fun addGoal(goal: Goal){
+        goalList.add(goal)
     }
 }
